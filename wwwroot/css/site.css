@@ -1,0 +1,111 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Kumar+One+Outline|Sedgwick+Ave');
+
+:root {
+    --primary-color: #068587;
+    --secondary-color: #4FB99F;
+    --dark-blue: #112F41;
+    --yellow: #F2B134;
+    --red: #ED553B;
+    --white: #eee;
+    --grey: #ddd;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Sedgwick Ave', cursive;
+}
+body {
+    font-size: 1.5rem;
+    padding: 3rem;
+    background-color: var(--red);
+    min-height: 100vh;
+}
+.title {
+    font-family: 'Kumar One Outline', cursive;
+    text-align: center;
+    font-size: 4.5rem;
+    padding: 2rem;
+}
+.wrapper {
+    padding: 2rem;
+}
+.game-container {
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    margin: 0 auto;
+}
+.stats {
+    padding: 1rem;
+    font-size: 3rem;
+    background-color: var(--yellow);
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50px 0 0 0;
+}
+.dojodachi {
+    padding: 1rem;
+    background-color: var(--yellow);
+    width: 75%;
+    height: 40rem;
+    border-radius: 0 50px 0 0;
+    position: relative;
+    box-shadow: 1rem 0rem 0rem rgba(0,0,0, .5);
+}
+.dojodachi__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.dojodachi__error {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 4rem;
+}
+.ui {
+    padding: 3rem 0;
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 0 0 50px 50px;
+    background-color: var(--yellow);
+    box-shadow: 1rem 1rem 0rem rgba(0,0,0, .5);
+}
+.button {
+    display: inline-block;
+    width: 20%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 3rem;
+    border-radius: 4px;
+    text-align: center;
+}
+.button--reset {
+    display: block;
+    background-color: var(--dark-blue);
+    margin: 1rem auto;
+    box-shadow: 1rem 1rem 0rem rgba(0,0,0, .5);
+}
+.button--win {
+    display: block;
+    background-color: green;
+    color: var(--white);
+    margin: 1rem auto;
+    box-shadow: 1rem 1rem 0rem rgba(0,0,0, .5);
+}
+.button--reset:hover {
+    background-color: var(--primary-color);
+}
+.ui a:hover {
+    background-color: var(--secondary-color);
+}

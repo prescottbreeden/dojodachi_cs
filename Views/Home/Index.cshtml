@@ -1,0 +1,34 @@
+﻿@model Dojodachi
+
+<h1 class="title">Dojodachi</h1>
+<div class="wrapper">
+  <div class="game-container">
+    <div class="stats">
+      <p>Meals: @Model.Meals</p>
+      <p>Energy: @Model.Energy</p>
+      <p>Fullness: @Model.Fullness</p>
+      <p>Happiness: @Model.Happiness</p>
+    </div>
+    <div class="dojodachi">
+      <img class="dojodachi__img" src="@Url.Content(Model.Image)" alt="Dojodachi">
+    </div>
+  </div>
+  <div class="ui">
+    <a class="button" href="/feed">Feed</a>
+    <a class="button" href="/play">Play</a>
+    <a class="button" href="/work">Work</a>
+    <a class="button" href="/sleep">Sleep</a>
+  </div>
+  <p class="dojodachi__error">@Model.Status</p>      
+  @{
+    if(@Model.IsDead)
+    {
+      <a href="/reset" class="button button--reset">Reset Game</a>
+    }
+
+    if(@Model.MegaDachi)
+    {
+      <a href="/reset" class="button button--win">You Win!</a>
+    }
+  }
+</div>
